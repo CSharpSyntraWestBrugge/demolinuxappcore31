@@ -54,10 +54,7 @@ stages:
       inputs:
         buildType: 'current'
         artifactName: 'drop'
-        itemPattern: '**/azuredeploy.json'
-        targetPath: '$(Pipeline.Workspace)/arm'
-
-    - powershell: Get-ChildItem $(Pipeline.Workspace) -Recurse
+#    - powershell: Get-ChildItem $(Pipeline.Workspace) -Recurse
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'

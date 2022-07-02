@@ -55,6 +55,12 @@ stages:
         buildType: 'current'
         artifactName: 'drop'
 #    - powershell: Get-ChildItem $(Pipeline.Workspace) -Recurse
+    - task: Bash@3
+      inputs:
+         targetType: 'inline'
+         script: |
+           # Write your commands here           
+           ls -lha
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'

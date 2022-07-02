@@ -39,7 +39,7 @@ stages:
     - task: PublishPipelineArtifact@1
       inputs:
         targetPath: '$(Build.ArtifactStagingDirectory)'
-        artifact: 'artifact'
+        artifact: 'drop'
         publishLocation: 'pipeline'
 - stage: test
   dependsOn: build
@@ -48,5 +48,13 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
     steps:
-    - download: current
-      artifact: drop
+  #  - download: current
+  #    artifact: drop
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'current'
+        artifactName: 'drop'
+        itemPattern: '**/*.json'
+        targetPath: '$(Pipeline.Workspace)'
+
+    - powershell: Get-ChildItem $(Pipeline.Workspace) -Recurse

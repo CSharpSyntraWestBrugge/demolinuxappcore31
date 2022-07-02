@@ -9,3 +9,6 @@
 /DevOpsSample.WebApi/bin
 /DevOpsSample.WebApi/obj
 /DevOpsSample.WebApi/Properties
+/Arcus.Demo.WebAPI/bin/Debug/net6.0
+/Arcus.Demo.WebAPI/obj
+/Arcus.Demo.WebAPI/appsettings.Development.json

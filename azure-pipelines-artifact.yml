@@ -70,5 +70,5 @@ stages:
         resourceGroupName: 'devops'
         location: 'West Europe'
         templateLocation: 'Linked artifact'
-        csmParametersFile: '$(Pipeline.Workspace)/arm/azuredeploy.json'
+        csmParametersFile: '$(Pipeline.Workspace)/azuredeploy.json'
         deploymentMode: 'Incremental'

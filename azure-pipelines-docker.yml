@@ -14,7 +14,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'devopslab'
-    repository: 'devops-sample-webapp'
+    repository: 'devops'
     command: 'buildAndPush'
     Dockerfile: '$(System.DefaultWorkingDirectory)/Dockerfile'
     buildContext: '$(System.DefaultWorkingDirectory)'

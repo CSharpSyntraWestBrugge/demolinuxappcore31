@@ -73,3 +73,10 @@ stages:
         templateLocation: 'Linked artifact'
         csmFile: '$(Pipeline.Workspace)/arm/azuredeploy.json'
         deploymentMode: 'Incremental'
+    - task: AzureWebApp@1
+      inputs:
+        azureSubscription: 'Pay-As-You-Go Dev/Test(d2b96e08-6110-47f7-bc0b-3475ac334617)'
+        appType: 'webAppLinux'
+        appName: 'webapplinux-dev-we-hco'
+        package: '$(Pipeline.Workspace)/**/*.zip'
+        runtimeStack: 'DOTNETCORE|3.1'

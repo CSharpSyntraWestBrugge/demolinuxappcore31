@@ -12,8 +12,8 @@ variables:
 steps:
 - task: Docker@2
   inputs:
-    containerRegistry: 'devopstestcr2020'
-    repository: 'devops-sample-webapp'
+    containerRegistry: 'devopsdemowecr2022'
+    repository: 'devops'
     command: 'buildAndPush'
     Dockerfile: '$(System.DefaultWorkingDirectory)/Dockerfile'
     buildContext: '$(System.DefaultWorkingDirectory)'

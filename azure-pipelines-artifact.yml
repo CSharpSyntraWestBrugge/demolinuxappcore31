@@ -24,9 +24,9 @@ steps:
     projects: '$(projectPath)'
     arguments: '-r linux-x64 -c $(buildConfiguration) -o $(Build.ArtifactStagingDirectory)'
 
-- task: PublishBuildArtifacts@1
+- task: PublishPipelineArtifact@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'devops'
-    publishLocation: 'Container'
-
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'artifact/package'
+    publishLocation: 'pipeline'
+  

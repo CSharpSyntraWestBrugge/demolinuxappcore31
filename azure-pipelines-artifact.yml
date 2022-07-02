@@ -10,8 +10,6 @@ variables:
   buildConfiguration: 'Release'
   projectPath: '**/DevOpsSample.WebApp'
 
- trigger:
-- none
 stages:
 - stage: build
   jobs:
@@ -43,8 +41,6 @@ stages:
         targetPath: '$(Build.ArtifactStagingDirectory)'
         artifact: 'artifact'
         publishLocation: 'pipeline'
-
-
 - stage: test
   dependsOn: build
   jobs:

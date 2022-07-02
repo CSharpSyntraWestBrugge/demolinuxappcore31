@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/DevOpsSample.Deployment
+/DevOpsSample.WebApp/bin/Debug/netcoreapp3.1
+/DevOpsSample.WebApp/obj

@@ -6,3 +6,6 @@
 /DevOpsSample.Deployment
 /DevOpsSample.WebApp/bin/Debug/netcoreapp3.1
 /DevOpsSample.WebApp/obj
+/DevOpsSample.WebApi/bin
+/DevOpsSample.WebApi/obj
+/DevOpsSample.WebApi/Properties

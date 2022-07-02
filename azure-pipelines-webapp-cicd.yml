@@ -71,7 +71,7 @@ stages:
         resourceGroupName: 'devops'
         location: 'West Europe'
         templateLocation: 'Linked artifact'
-        csmFile: '$(Pipeline.Workspace)/arm/azuredeploy.json'
+        csmFile: '$(Pipeline.Workspace)/arm/azuredeploy-webapp.json'
         deploymentMode: 'Incremental'
     - task: AzureWebApp@1
       inputs:

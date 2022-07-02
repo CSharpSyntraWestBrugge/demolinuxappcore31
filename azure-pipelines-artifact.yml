@@ -54,6 +54,7 @@ stages:
       inputs:
         buildType: 'current'
         artifactName: 'drop'
+        path: '$(Pipeline.Workspace)'
 #    - powershell: Get-ChildItem $(Pipeline.Workspace) -Recurse
     - task: Bash@3
       inputs:
@@ -70,5 +71,5 @@ stages:
         resourceGroupName: 'devops'
         location: 'West Europe'
         templateLocation: 'Linked artifact'
-        csmParametersFile: '$(Pipeline.Workspace)/azuredeploy.json'
+        csmFile: '$(Pipeline.Workspace)/azuredeploy.json'
         deploymentMode: 'Incremental'

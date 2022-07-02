@@ -58,3 +58,14 @@ stages:
         targetPath: '$(Pipeline.Workspace)'
 
     - powershell: Get-ChildItem $(Pipeline.Workspace) -Recurse
+    - task: AzureResourceManagerTemplateDeployment@3
+      inputs:
+        deploymentScope: 'Resource Group'
+        azureResourceManagerConnection: 'Pay-As-You-Go Dev/Test(d2b96e08-6110-47f7-bc0b-3475ac334617)'
+        subscriptionId: 'd2b96e08-6110-47f7-bc0b-3475ac334617'
+        action: 'Create Or Update Resource Group'
+        resourceGroupName: 'devops'
+        location: 'West Europe'
+        templateLocation: 'Linked artifact'
+        csmParametersFile: '$(Pipeline.Workspace)/arm/azuredeploy.json'
+        deploymentMode: 'Incremental'

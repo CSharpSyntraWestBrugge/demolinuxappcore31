@@ -12,3 +12,11 @@
 /Arcus.Demo.WebAPI/bin/Debug/net6.0
 /Arcus.Demo.WebAPI/obj
 /Arcus.Demo.WebAPI/appsettings.Development.json
+/media
+/src/Application/.vs/DevOps.App
+/src/Application/DevOps.Resources/bin/Debug
+/src/Application/DevOps.Resources/obj/Debug
+/src/Test/DevOps.App.Tests/bin/Debug/netcoreapp3.1
+/src/Test/DevOps.App.Tests/obj/Debug/netcoreapp3.1
+/src/Test/DevOps.App.Tests/obj/Release/netcoreapp3.1
+/src/Test/DevOps.App.Tests/obj
